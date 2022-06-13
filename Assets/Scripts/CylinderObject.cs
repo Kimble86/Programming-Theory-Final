@@ -7,15 +7,13 @@ using UnityEngine;
 /// </summary>
 public class CylinderObject : Shape
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public CubeObject cube;
+    private string m_TitleText = "Cylinder was clicked! I think cube doesn't like me...";
 
-    // Update is called once per frame
-    void Update()
+    // INHERITANCE
+    public override void OnShapeClick()
     {
-        
+        ChangeText(m_TitleText);
+        cube.TextToDisplay = "Why did you click Cylinder!!!";
     }
 }

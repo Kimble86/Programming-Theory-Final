@@ -7,15 +7,17 @@ using UnityEngine;
 /// </summary>
 public class CubeObject : Shape
 {
-    private string m_TitleText = "Cube was clicked!";
+    private string textToDisplay = "Cube was clicked!";
+
+    // ENCAPSULATION
+    public string TextToDisplay
+    {
+        get { return textToDisplay; }
+        set { textToDisplay = value; }
+    }
 
     public override void OnShapeClick()
     {
-        ChangeText(m_TitleText);
-    }
-
-    private void Disappear()
-    {
-        // Shape can disappear
+        ChangeText(textToDisplay);
     }
 }
