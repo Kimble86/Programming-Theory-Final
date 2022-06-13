@@ -8,7 +8,6 @@ public class Shape : MonoBehaviour
 
     [SerializeField]
     private string whenClicked = "I am a little shape and I was clicked";
-    private float disappearDuration = 1f;
 
     public virtual void OnShapeClick()
     {
